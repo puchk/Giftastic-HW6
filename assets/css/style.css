@@ -1,0 +1,26 @@
+body {
+	/*background: url("../images/background.jpg") no-repeat center center fixed;*/
+	/*background-size: 100%;*/
+}
+
+header{
+	background: blue;
+}
+
+#placeButtons {
+	background: green;
+}
+
+.player {
+	width: 60%;
+	margin: 5px auto;
+}
+
+.content {
+	width: 50%;
+	display: inline-block;
+}
+
+.playerGif {
+	width: 100%;
+}
