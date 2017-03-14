@@ -2,20 +2,31 @@ var topics = ["LeBron James", "Kevin Durant", "James Harden", "Kawhi Leonard", "
 
 
 
-    for (var i=0; i<topics.length; i++){
-          var a = $("<button>");
-          // Adding a class of movie to our button
-          a.addClass("player");
-          // Adding a data-attribute
-          a.attr("data-player", topics[i]);
-          // Providing the initial button text
-          a.text(topics[i]);
-          // Adding the button to the buttons-view div
-          $("#placeButtons").append(a);
-	}
+for (var i=0; i<topics.length; i++){
+      var a = $("<button>");
+      // Adding a class of movie to our button
+      a.addClass("player");
+      // Adding a data-attribute
+      a.attr("data-player", topics[i]);
+      // Providing the initial button text
+      a.text(topics[i]);
+      // Adding the button to the buttons-view div
+      $("#placeButtons").append(a);
+}
+
+$("#submitButton").on("click", function(){
+	var a = $("<button>");
+      // Adding a class of movie to our button
+	a.addClass("player");
+      // Adding a data-attribute
+	a.attr("data-player", $("#addPlayerInput").val().trim());
+      // Providing the initial button text
+	a.text($("#addPlayerInput").val().trim());
+      // Adding the button to the buttons-view div
+      $("#placeButtons").append(a);
 
 
-$("button").on("click", function(){
+$(".player").on("click", function(){
 	var player = $(this).attr("data-player");
 	var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + player + "&api_key=dc6zaTOxFJmzC&limit=10";
   $.ajax({
@@ -23,6 +34,7 @@ $("button").on("click", function(){
       method: "GET"
     })
         .done(function(response) {
+        	$("#placeGifs").empty();
 
        		var playerData = response.data;
 
@@ -42,8 +54,8 @@ $("button").on("click", function(){
         
               $("#placeGifs").prepend(gifDiv);
             }
-    
-          
+
+    //Start and Pause Gifs 
 	$(".playerGif").on("click", function(){
 		var isPlaying = $(this).attr("data-isGifPlaying");
 		console.log(isPlaying==="no");
@@ -57,6 +69,8 @@ $("button").on("click", function(){
 		}
 	});
 
+
         });
         });
 
+	});
