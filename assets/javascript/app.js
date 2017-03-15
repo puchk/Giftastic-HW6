@@ -1,6 +1,6 @@
 var topics = ["LeBron James", "Kevin Durant", "James Harden", "Kawhi Leonard", "Russell Westbrook", "Steph Curry", "Chris Paul"];
 
-// Creates a button and appends it to other buttons
+// Creates a button and appends it to placeButtons div
 function addButtons(names){
   var a = $("<button>");
   a.addClass("player");
