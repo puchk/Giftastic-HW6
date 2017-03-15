@@ -40,7 +40,7 @@ $("#submitButton").on("click", function(){
 // Gathers data from api and places data in divs
 function displayGifs() {
   var player = $(this).attr("data-player");
-  var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + player + "&api_key=dc6zaTOxFJmzC&limit=10";
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + player + "&api_key=dc6zaTOxFJmzC&limit=10";
   $.ajax({
       url: queryURL,
       method: "GET"
