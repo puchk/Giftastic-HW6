@@ -6,18 +6,17 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
 </head>
-<body>
-
-		<header>
-			<h1>NBA GIFS</h1>
-		</header>
+<body>	
 	<div class="container">
+		<header class="row">
+			<h1 id="title">NBA GIFS</h1>
+		</header>
 		<div class="row">
 			<div class="col-xs-3">
 				<div id="placeButtons"></div>
 				<div id="addButtons"></div>
-				<input id="addPlayerInput" for="submitButton" type="text" placeholder="Add a Player">
-				<button id="submitButton">Submit</button>
+				<input id="addPlayerInput" class="userInput" for="submitButton" type="text" placeholder="Add a Player">
+				<button class="userInput" id="submitButton">Submit</button>
 			</div>
 			<div class="col-xs-1"></div>
 			<div class="col-xs-8">
@@ -25,9 +24,6 @@
 			</div>
 		</div>
 	</div>
-
-
-
 
 <script src="assets/javascript/app.js"></script>
 
